@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #03051e;
+    color: #F0F0F0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main {
+    background-image: url('opp.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    position: absolute;
+    margin-bottom: 30px;
+    width: 100%;
+    z-index: 10;
+}
+
+nav .left {
+    font-size: 30px;
+    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: rgb(60, 255, 242) ;
+    text-shadow: 0 0 20px rgba(13, 213, 213, 0.8);
+}
+
+nav .right ul {
+    display: flex;
+    list-style: none;
+}
+
+nav .right ul li {
+    font-family:serif;
+    margin: 0 20px;
+    padding: 10px 0;
+}
+
+nav .right ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+nav .right ul a:hover {
+    color: rgb(13, 213, 213);
+    background-color: #0a1c32;
+    font-size: 1.1rem;
+    border-radius: 20px;
+    filter: brightness(1.5);
+    text-shadow: 0 0 20px rgba(13, 213, 213, 0.8);
+    transform: scale(1.1);
+}
+.section {
+    padding: 30px 0;
+}
+
+.leftsection {
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 100px;
+    font-family: poppins;
+}
+
+.leftsection .name {
+    font-size: 3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffffff;
+    text-shadow: 0 0 10px #120a01, 0 0 20px #fdffff, 0 0 30px #090408, 0 0 40px #000000;
+}
+
+.leftsection > span {
+    font-size: 2rem;
+}
+
+.about {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    width: 60vw;
+}
+.about h1{
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(13, 213, 213, 0.8);
+}
+
+footer {
+    text-shadow: 0 0 10px #9dfdff, 0 0 20px #7acce2, 0 0 30px #5bfffa, 0 0 40px #46c7ff;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .text {
+    margin-bottom: 10px;
+}
+
+footer .logo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+ 
+}
+
+.logo a img {
+    height: 20px;
+    width: auto;
+}
+.logo .insta a img {
+    height: 28px;
+    width: auto;
+}
+footer .logo a img {
+    height: 20px;
+    width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .logo a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+footer .insta a img {
+    height: 28px;
+    width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer .insta a:hover img {
+    transform: scale(1.2);
+    filter: brightness(1.5);
+}
+
+
+
+
+
+
+
+
