@@ -1,18 +1,20 @@
+/* Global Reset */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    
 }
 
 body {
-    background-color: #03051e;
-    color: #F0F0F0;
-    font-family: 'Poppins', sans-serif;
+    background-color: #03051e; /* Dark background */
+    color: #FFFFFF; /* White text */
+    font-family: 'Roboto', sans-serif; /* Clean and professional font */
+    overflow-x: hidden;
 }
 
+/* Main container styling */
 .main {
-    background-image: url('opp.jpg');
+    background-image: url('test.webp'); /* Ensure you update this path to the correct file */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,21 +23,25 @@ body {
     position: relative;
 }
 
+/* Navbar styling */
 nav {
     display: flex;
     justify-content: space-around;
-    padding: 20px 0;
+    padding: 20px;
     position: absolute;
-    margin-bottom: 30px;
     width: 100%;
     z-index: 10;
+    border: 0.1px solid #00FFC6;
+    border-radius: 50px;
+    box-shadow: 0 0 15px rgb(61, 255, 213);
+    background-color: rgba(53, 49, 49, 0.5);
 }
 
 nav .left {
+    font-family: 'Montserrat', sans-serif; /* Bold, modern font for branding */
     font-size: 30px;
-    font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    color: rgb(60, 255, 242) ;
-    text-shadow: 0 0 20px rgba(13, 213, 213, 0.8);
+    color: #00FFC6; /* Vibrant Teal */
+    text-shadow: 0 0 20px rgba(0, 255, 198, 0.8); /* Soft glow for visibility */
 }
 
 nav .right ul {
@@ -44,27 +50,83 @@ nav .right ul {
 }
 
 nav .right ul li {
-    font-family:serif;
     margin: 0 20px;
     padding: 10px 0;
 }
 
 nav .right ul a {
-    text-decoration: none;
-    color: white;
+    font-family: 'Roboto', sans-serif; /* Simple, modern font for readability */
     font-size: 18px;
-    transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease, background-color 0.3s ease;
+    color: #ffffff; /* Light Gray */
+    text-decoration: none;
+    transition: transform 0.4s ease, color 0.3s ease, text-shadow 0.3s ease, background-color 0.4s ease;
+    
 }
 
 nav .right ul a:hover {
-    color: rgb(13, 213, 213);
-    background-color: #0a1c32;
-    font-size: 1.1rem;
+    color: #FFD700;
+    font-size: 1.2rem;
     border-radius: 20px;
-    filter: brightness(1.5);
-    text-shadow: 0 0 20px rgba(13, 213, 213, 0.8);
-    transform: scale(1.1);
+    filter: brightness(1.2);
+    text-shadow: 
+        0 0 10px #FFD700, 
+        0 0 20px #FFD700, 
+        0 0 30px #FFD700, 
+        0 0 40px #FFAC33;
+    background-color: transparent;
+    transform: scale(1.2) translateY(-2px);
+    transition: all 0.3s ease-in-out;
 }
+
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    nav .right ul {
+        display: none;
+        border: 2px solid #00FFC6;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 198, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger div {
+        background-color: white;
+        width: 25px;
+        height: 3px;
+        margin: 5px;
+    }
+}
+
+nav .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+nav .menu a {
+    font-family: 'Roboto', sans-serif;
+    color: #D1D1D1; /* Light Gray */
+    font-size: 18px;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+nav .menu a:hover {
+    color: #00FFC6; /* Hover effect with Teal */
+}
+
+/* Section Styling */
 .section {
     padding: 30px 0;
 }
@@ -73,36 +135,51 @@ nav .right ul a:hover {
     font-size: 3rem;
     text-align: center;
     padding-top: 100px;
-    font-family: poppins;
 }
 
 .leftsection .name {
+    font-family: 'Montserrat', sans-serif; /* Bold and impactful font */
     font-size: 3rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #ffffff;
-    text-shadow: 0 0 10px #120a01, 0 0 20px #fdffff, 0 0 30px #090408, 0 0 40px #000000;
+    color: #01433c; /* Vibrant Teal */
+    text-shadow: 0 0 10px #00FFC6, 0 0 20px #00FFC6, 0 0 30px #00FFC6; /* Soft glow */
 }
 
 .leftsection > span {
     font-size: 2rem;
+    font-family: 'Roboto', sans-serif; /* Clean font for secondary text */
+    color: #ffffff; /* Light Gray */
 }
 
+/* About Me Section */
 .about {
     text-align: center;
     margin-top: 20px;
     font-size: 1.2rem;
-    width: 60vw;
+    width: 80%;
+    margin: 0 auto;
 }
-.about h1{
+.about p {
+    line-height: 1.6;
     color: #ffffff;
-    text-shadow: 0 0 20px rgba(13, 213, 213, 0.8);
 }
 
+.about h1 {
+    margin-bottom: 20px;
+}
+
+
+.about h1 {
+    font-family: 'Raleway', sans-serif; /* Elegant font for headings */
+    color: #00FFC6; /* Vibrant Teal */
+    text-shadow: 0 0 20px rgba(0, 255, 198, 0.8); /* Glow effect for emphasis */
+}
+
+/* Footer Styling */
 footer {
-    text-shadow: 0 0 10px #9dfdff, 0 0 20px #7acce2, 0 0 30px #5bfffa, 0 0 40px #46c7ff;
+    text-shadow: 0 0 10px rgba(0, 255, 198, 0.8);
     text-align: center;
     padding: 20px;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Simple font for footer */
     font-size: 14px;
     position: absolute;
     bottom: 0;
@@ -110,6 +187,8 @@ footer {
 }
 
 footer .text {
+    text-shadow: 2px 0 10px #22ffcf, 0 0 20px #22fffb, 0 0 30px #00FFC6;
+  
     margin-bottom: 10px;
 }
 
@@ -118,43 +197,24 @@ footer .logo {
     justify-content: center;
     gap: 20px;
     align-items: center;
- 
 }
 
-.logo a img {
+footer img {
     height: 20px;
     width: auto;
-}
-.logo .insta a img {
-    height: 28px;
-    width: auto;
-}
-footer .logo a img {
-    height: 20px;
-    width: auto;
-    transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-footer .logo a:hover img {
-    transform: scale(1.2);
-    filter: brightness(1.5);
 }
 
 footer .insta a img {
     height: 28px;
     width: auto;
+}
+
+footer .logo a img, footer .insta a img {
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-footer .insta a:hover img {
+footer .logo a:hover img, footer .insta a:hover img {
     transform: scale(1.2);
     filter: brightness(1.5);
+    text-shadow: 0 0 10px #00FFC6, 0 0 20px #00FFC6, 0 0 30px #00FFC6;
 }
-
-
-
-
-
-
-
-
